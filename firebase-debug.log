@@ -1,0 +1,570 @@
+[debug] [2018-07-31T02:10:11.624Z] ----------------------------------------------------------------------
+[debug] [2018-07-31T02:10:11.628Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ZaCy\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-07-31T02:10:11.629Z] CLI Version:   3.19.1
+[debug] [2018-07-31T02:10:11.629Z] Platform:      win32
+[debug] [2018-07-31T02:10:11.629Z] Node Version:  v10.5.0
+[debug] [2018-07-31T02:10:11.638Z] Time:          Tue Jul 31 2018 09:10:11 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:11.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-31T02:10:11.661Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-31T02:10:11.662Z] > authorizing via signed-in user
+[debug] [2018-07-31T02:10:11.666Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/jober-candidate  
+  
+ Tue Jul 31 2018 09:10:11 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:12.756Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:12.757Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/jober-candidate/tokens  
+  
+ Tue Jul 31 2018 09:10:12 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:13.632Z] <<< HTTP RESPONSE 200
+[warn] !  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'jober-candidate'...
+[info] 
+[info] i  deploying functions
+[debug] [2018-07-31T02:10:20.439Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.27.0",
+    "firebase-admin": "^5.11.0",
+    "firebase-functions": "^1.0.1",
+    "nodemailer": "^4.6.4"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-07-31T02:10:20.443Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/jober-candidate?view=CONSUMER_VIEW  
+  
+ Tue Jul 31 2018 09:10:20 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:20.444Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/jober-candidate?view=CONSUMER_VIEW  
+  
+ Tue Jul 31 2018 09:10:20 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:22.160Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:22.185Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2018-07-31T02:10:22.187Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/jober-candidate  
+  
+ Tue Jul 31 2018 09:10:22 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:23.376Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:23.377Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/20736820382:getServerAppConfig  
+  
+ Tue Jul 31 2018 09:10:23 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:24.237Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-07-31T02:10:24.239Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/jober-candidate/configs  
+  
+ Tue Jul 31 2018 09:10:24 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:24.675Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (44.26 KB) for uploading
+[debug] [2018-07-31T02:10:25.780Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions:generateUploadUrl  
+  
+ Tue Jul 31 2018 09:10:25 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:26.267Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:26.268Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D  
+ ReadStream {
+  _readableState:
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { length: 1 },
+     length: 45327,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     emitClose: false,
+     destroyed: false,
+     defaultEncoding: 'utf8',
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path:
+   'C:\\Users\\ZaCy\\AppData\\Local\\Temp\\firebase-functions-13248ytMdHeV2VjoY.zip',
+  fd: 5,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: Infinity,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 45327,
+  closed: false } 
+ Tue Jul 31 2018 09:10:26 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:26.782Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[debug] [2018-07-31T02:10:26.784Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions  
+  
+ Tue Jul 31 2018 09:10:26 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.141Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating function onLisenerCreateJobAlgolia...
+[debug] [2018-07-31T02:10:27.144Z] Trigger is:  {"eventTrigger":{"resource":"projects/jober-candidate/databases/(default)/documents/jobs/{jobId}","eventType":"providers/cloud.firestore/eventTypes/document.write","service":"firestore.googleapis.com"}}
+[info] i  functions: updating function onLisenerCreateCandidatesAlgolia...
+[debug] [2018-07-31T02:10:27.145Z] Trigger is:  {"eventTrigger":{"resource":"projects/jober-candidate/databases/(default)/documents/candidates/{candidateId}","eventType":"providers/cloud.firestore/eventTypes/document.write","service":"firestore.googleapis.com"}}
+[info] i  functions: updating function CheckExpire...
+[debug] [2018-07-31T02:10:27.146Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating function onLisenerSignUpCandidate...
+[debug] [2018-07-31T02:10:27.147Z] Trigger is:  {"eventTrigger":{"resource":"projects/jober-candidate/databases/(default)/documents/candidates/{candidateId}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] i  functions: updating function onLisenerSignUpCompany...
+[debug] [2018-07-31T02:10:27.147Z] Trigger is:  {"eventTrigger":{"resource":"projects/jober-candidate/databases/(default)/documents/companies/{companyId}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] i  functions: updating function onLisenerKeyTransaction...
+[debug] [2018-07-31T02:10:27.148Z] Trigger is:  {"eventTrigger":{"resource":"projects/jober-candidate/databases/(default)/documents/keyTransactions/{transactionId}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] i  functions: updating function sendNotifications...
+[debug] [2018-07-31T02:10:27.149Z] Trigger is:  {"eventTrigger":{"resource":"projects/jober-candidate/databases/(default)/documents/notifications/{notificationId}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[debug] [2018-07-31T02:10:27.152Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/onLisenerCreateJobAlgolia 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/onLisenerCreateJobAlgolia',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger:
+   { resource:
+      'projects/jober-candidate/databases/(default)/documents/jobs/{jobId}',
+     eventType: 'providers/cloud.firestore/eventTypes/document.write',
+     service: 'firestore.googleapis.com' } } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.155Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/onLisenerCreateCandidatesAlgolia 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/onLisenerCreateCandidatesAlgolia',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger:
+   { resource:
+      'projects/jober-candidate/databases/(default)/documents/candidates/{candidateId}',
+     eventType: 'providers/cloud.firestore/eventTypes/document.write',
+     service: 'firestore.googleapis.com' } } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.156Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/CheckExpire 
+query params: {"updateMask":"sourceUploadUrl,name,labels,httpsTrigger"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/CheckExpire',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  httpsTrigger: {} } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.157Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/onLisenerSignUpCandidate 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/onLisenerSignUpCandidate',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger:
+   { resource:
+      'projects/jober-candidate/databases/(default)/documents/candidates/{candidateId}',
+     eventType: 'providers/cloud.firestore/eventTypes/document.create',
+     service: 'firestore.googleapis.com' } } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.157Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/onLisenerSignUpCompany 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/onLisenerSignUpCompany',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger:
+   { resource:
+      'projects/jober-candidate/databases/(default)/documents/companies/{companyId}',
+     eventType: 'providers/cloud.firestore/eventTypes/document.create',
+     service: 'firestore.googleapis.com' } } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.162Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/onLisenerKeyTransaction 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/onLisenerKeyTransaction',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger:
+   { resource:
+      'projects/jober-candidate/databases/(default)/documents/keyTransactions/{transactionId}',
+     eventType: 'providers/cloud.firestore/eventTypes/document.create',
+     service: 'firestore.googleapis.com' } } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.163Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions/sendNotifications 
+query params: {"updateMask":"sourceUploadUrl,name,labels,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+ { sourceUploadUrl:
+   'https://storage.googleapis.com/gcf-upload-us-central1-a1247999-063d-4f8a-bbd9-a9fd78c4bf8d/3d017002-7d97-47e7-bf7a-38131a5143c1.zip?GoogleAccessId=service-20736820382@gcf-admin-robot.iam.gserviceaccount.com&Expires=1533004825&Signature=PVWeJXnjJcvtYvKL2w%2BpS6Ddm9U2rnE6iOjCcppybgm%2BKesGhQSCcGJVm7a3GrFtFu7fGlwVjX93A6YDyF4%2B7hidB1u7%2B0gK4EXVeC3HUKoRHgFJZnoBXzhbPnW4T4kxH%2BU4FjOcFi%2BdsGZjlJTT3lVFcSg1JTR%2FVWo4O9QB1TXswvhC8KC1Ep9fmVIHfV3iuYc4ruQBs0prR6MeF7hqyt8bSzKBS8dYXp72wKLVgkP%2Fgy2sHHTDpy7k%2F9p%2BKeAe83GP9SbwsTWlauqfWE9N5zjXbG%2Fck%2BQ9tDkoxX0kJKXO%2FuFk3sr6S7fgB9nTkPJrK9AXkC%2BPu9JLX5itk%2Frz%2Bw%3D%3D',
+  name:
+   'projects/jober-candidate/locations/us-central1/functions/sendNotifications',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger:
+   { resource:
+      'projects/jober-candidate/databases/(default)/documents/notifications/{notificationId}',
+     eventType: 'providers/cloud.firestore/eventTypes/document.create',
+     service: 'firestore.googleapis.com' } } 
+ Tue Jul 31 2018 09:10:27 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:27.602Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:27.624Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:27.743Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:27.765Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:27.980Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.014Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.294Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.295Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/jober-candidate/locations/us-central1/functions  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.627Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.628Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.629Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.629Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.629Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENhbmRpZGF0ZS9jX3Njb3VKRGJDSQ  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.630Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.630Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.631Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:28 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:28.956Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.961Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.962Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.969Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.993Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:28.995Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:29.018Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:30.958Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:30 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:30.965Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:30 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:30.965Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENhbmRpZGF0ZS9jX3Njb3VKRGJDSQ  
+  
+ Tue Jul 31 2018 09:10:30 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:30.972Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:30 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:30.994Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:30 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:30.997Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:30 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:31.018Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:31 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:31.280Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:31.284Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:31.288Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:31.293Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:31.318Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:31.319Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:31.324Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.282Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.284Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.292Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.299Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENhbmRpZGF0ZS9jX3Njb3VKRGJDSQ  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.318Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.322Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.329Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:33 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:33.592Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.606Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.615Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.618Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.619Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.646Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:33.647Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.593Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.609Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.619Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENhbmRpZGF0ZS9jX3Njb3VKRGJDSQ  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.620Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.620Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.647Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.648Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:35 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:35.903Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.924Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.925Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.946Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.953Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.954Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:35.968Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:37.904Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:37.929Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:37.930Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENhbmRpZGF0ZS9jX3Njb3VKRGJDSQ  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:37.949Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:37.959Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:37.960Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:37.970Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:37 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:38.235Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:38.258Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:38.265Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:38.279Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:38.285Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:38.286Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:38.287Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:40.235Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.263Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENhbmRpZGF0ZS9jX3Njb3VKRGJDSQ  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.265Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.284Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.286Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.286Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.293Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:40 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:40.546Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:40.563Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:40.575Z] <<< HTTP RESPONSE 200
+[info] +  functions[onLisenerSignUpCandidate]: Successful update operation. 
+[debug] [2018-07-31T02:10:40.589Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:40.590Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:40.604Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:40.605Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:42.547Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:42 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:42.567Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:42 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:42.590Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:42 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:42.591Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:42 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:42.608Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:42 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:42.608Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:42 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:43.684Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:43.716Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:43.718Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:43.729Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:43.742Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:43.864Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:45.687Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:45 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:45.719Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:45 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:45.720Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:45 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:45.732Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:45 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:45.746Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:45 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:45.865Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:45 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:46.007Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:46.035Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:46.042Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:46.044Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:46.147Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:46.166Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:48.007Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:48 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:48.039Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:48 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:48.042Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:48 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:48.049Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:48 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:48.149Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:48 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:48.170Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:48 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:48.343Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:48.352Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:48.357Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:48.424Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:48.453Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:48.471Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:50.343Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:50 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:50.357Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:50 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:50.358Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:50 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:50.424Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:50 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:50.459Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:50 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:50.476Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:50 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:50.652Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:50.668Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:50.671Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:50.723Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:50.759Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:50.776Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:52.659Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:52 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:52.676Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:52 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:52.676Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:52 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:52.725Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:52 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:52.760Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:52 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:52.777Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:52 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:52.985Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:52.990Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:53.006Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:53.038Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:53.081Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:53.101Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:54.988Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:54 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:54.991Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:54 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:55.010Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:55 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:55.039Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:55 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:55.082Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:55 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:55.101Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:55 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:55.286Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:55.302Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:55.303Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:55.349Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:55.378Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:55.403Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:57.286Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lcktleVRyYW5zYWN0aW9uL0l1YzVhOUI2NUcw  
+  
+ Tue Jul 31 2018 09:10:57 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:57.307Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lclNpZ25VcENvbXBhbnkvUDBFb2pmNTJVOEU  
+  
+ Tue Jul 31 2018 09:10:57 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:57.307Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL0NoZWNrRXhwaXJlL1lzcUZIYmVOQjM0  
+  
+ Tue Jul 31 2018 09:10:57 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:57.349Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUNhbmRpZGF0ZXNBbGdvbGlhL2EwN196R3YzY2Rz  
+  
+ Tue Jul 31 2018 09:10:57 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:57.379Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL29uTGlzZW5lckNyZWF0ZUpvYkFsZ29saWEvR1V2Q3FpR3V0WGs  
+  
+ Tue Jul 31 2018 09:10:57 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:57.403Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/am9iZXItY2FuZGlkYXRlL3VzLWNlbnRyYWwxL3NlbmROb3RpZmljYXRpb25zL0JLNU9ZU0hLLTRZ  
+  
+ Tue Jul 31 2018 09:10:57 GMT+0700 (Indochina Time)
+[debug] [2018-07-31T02:10:57.617Z] <<< HTTP RESPONSE 200
+[info] +  functions[onLisenerKeyTransaction]: Successful update operation. 
+[debug] [2018-07-31T02:10:57.622Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:57.628Z] <<< HTTP RESPONSE 200
+[info] +  functions[onLisenerSignUpCompany]: Successful update operation. 
+[debug] [2018-07-31T02:10:57.660Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:57.668Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-31T02:10:57.709Z] <<< HTTP RESPONSE 200
